@@ -1,5 +1,9 @@
 .header {
+  background: $color-blue;
+  background: linear-gradient(135deg, $color-blue 0%, $color-green 100%);
+
   &__title {
     text-align: center;
+    color: $color-white;
   }
 }
