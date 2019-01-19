@@ -2,6 +2,13 @@ import starIcon from '../assets/icon-favourite.svg';
 import React from 'react';
 
 const ResultItem = ({ result }) => {
+  
+  const parseHTML = htmlContent => {
+    let parser = new DOMParser();
+    let parsedHtml = parser.parseFromString(htmlContent, 'text/html').body.textContent;
+    return { __html: parsedHtml };
+  }
+
   return(
     <div className="result__item">
       <div className="result__title">
@@ -18,8 +25,10 @@ const ResultItem = ({ result }) => {
           {result.title}
         </h2>
       </div>
-      <div className="result__description">
-        {result.description}
+      <div 
+        className="result__description" 
+        dangerouslySetInnerHTML={parseHTML(result.description)}
+      >
       </div>
     </div>
   );
