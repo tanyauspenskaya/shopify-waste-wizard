@@ -1,0 +1,22 @@
+.result {
+  &__item {
+    display: flex;
+  }
+
+  &__title {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__description {
+    width: 55%;
+  }
+
+  &__star {
+    display: block;
+    width: 1.8em;
+    height: 1.8em;
+    fill: $color-grey;
+  }
+}

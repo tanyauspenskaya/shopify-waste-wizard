@@ -23,6 +23,10 @@ class App extends Component {
     });
   }
 
+  componentDidUpdate = () => {
+    console.log(this.state);
+  }
+
   onSearchSubmit = (term) => {
     const searchTerm = term.toLowerCase();
     const data = this.state.data;
@@ -50,7 +54,9 @@ class App extends Component {
           onFormSubmit={this.onSearchSubmit} 
           onSearchClear={this.onSearchClear} 
         />
-        <Results results={this.state.results} />
+        <Results 
+          results={this.state.results} 
+        />
         <Favourites />
       </div>
     );
