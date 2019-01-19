@@ -23,18 +23,33 @@ class App extends Component {
     });
   }
 
-  onSearchSubmit = async (term) => {
-    //const responseData = await wasteWizard.get('');
-    //console.log(responseData.data);
-    console.log(this.state.data);
+  onSearchSubmit = (term) => {
+    const searchTerm = term.toLowerCase();
+    const data = this.state.data;
+    const searchResults = data.filter(item => {
+      return item.keywords.toLowerCase().includes(searchTerm);
+    })
+    .map(item => {
+      return {
+        title: item.title,
+        description: item.body
+      }
+    });
+    this.setState({ results: searchResults });
+  }
 
+  onSearchClear = () => {
+    this.setState({ results: [] });
   }
 
   render(){
     return(
       <div>
         <Header />
-        <SearchBar onFormSubmit={this.onSearchSubmit} />
+        <SearchBar 
+          onFormSubmit={this.onSearchSubmit} 
+          onSearchClear={this.onSearchClear} 
+        />
         <Results results={this.state.results} />
         <Favourites />
       </div>

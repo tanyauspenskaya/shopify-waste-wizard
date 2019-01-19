@@ -5,6 +5,9 @@ class SearchBar extends Component {
 
   onInputChange = (e) => {
     this.setState({ term: e.target.value });
+    if (!e.target.value.length) {
+      this.props.onSearchClear();
+    }
   }
 
   onFormSubmit = (e) => {
