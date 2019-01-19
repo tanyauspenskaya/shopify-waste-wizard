@@ -1,4 +1,4 @@
-import starIcon from '../assets/icon-favourite.svg';
+import icon from '../assets/icons.svg';
 import React from 'react';
 
 const ResultItem = ({ result }) => {
@@ -18,12 +18,12 @@ const ResultItem = ({ result }) => {
             xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 50 47.86"
           >
-            <use href={starIcon + '#star'}></use>
+            <use href={icon + '#star'}></use>
           </svg>
         </button>
-        <h2 className="result__header">
+        <h3 className="result__name">
           {result.title}
-        </h2>
+        </h3>
       </div>
       <div 
         className="result__description" 

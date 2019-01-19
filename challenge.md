@@ -8,8 +8,8 @@ Build a web app to search for waste items using the Toronto Waste Wizard databas
 + Typing in the search field should *NOT* perform an API call.
 + A search must be performed when hitting enter or clicking the search button.
 + When the search input field is cleared, the list of results should also be cleared. 
-- Performing a search should render a list of potential matching items based on keywords. Each item should:
-   - Render the title and description of the item.
++ Performing a search should render a list of potential matching items based on keywords. Each item should:
+   + Render the title and description of the item.
    - Render a grey star button *if the item is not already favourited*.
    - Render a green star icon *if the item is already favourited*.
    - Clicking the star button should add the item to the favourites list.

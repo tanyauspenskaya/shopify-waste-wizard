@@ -1,0 +1,40 @@
+.search {
+  &__section {
+    padding: 1.5em;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    flex: 1;
+    height: 4.5em;
+    border-radius: .2em;
+    border: 1px solid $color-grey;
+  }
+
+  &__submit {
+    width: 4.5em;
+    margin: 0 0 0 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-green;
+    border: 0;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: .3s background-color ease;
+
+    &:hover {
+      background-color: $color-blue;
+    }
+  }
+
+  &__magnifier {
+    display: block;
+    fill: $color-white;
+    width: 2.8em;
+    height: 2.8em;
+  }
+}

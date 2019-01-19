@@ -48,7 +48,7 @@ class App extends Component {
 
   render(){
     return(
-      <div>
+      <div className="app">
         <Header />
         <SearchBar 
           onFormSubmit={this.onSearchSubmit} 
@@ -57,7 +57,9 @@ class App extends Component {
         <Results 
           results={this.state.results} 
         />
-        <Favourites />
+        <Favourites
+          favourites={this.state.favourites}
+        />
       </div>
     );
   }

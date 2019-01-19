@@ -1,3 +1,4 @@
+import icon from '../assets/icons.svg';
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
@@ -17,7 +18,7 @@ class SearchBar extends Component {
 
   render() {
     return(
-      <div className="search__container">
+      <section className="search__section">
         <form 
           className="search__form"
           onSubmit={this.onFormSubmit}
@@ -28,12 +29,20 @@ class SearchBar extends Component {
             onChange={this.onInputChange} 
             className="search__input"
           />
-          <input 
+          <button 
             type="submit" 
             className="search__submit"
-          />
+          >
+            <svg 
+              className="search__magnifier" 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 50 50"
+            >
+              <use href={icon + '#search'}></use>
+            </svg>
+          </button>
         </form>
-      </div>
+      </section>
     );
   }
 }

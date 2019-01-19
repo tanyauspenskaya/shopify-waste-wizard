@@ -12,9 +12,11 @@ const Results = ({ results }) => {
   });
 
   return(
-    <div className="result__list">
-      {resultsList}
-    </div>
+    <section className="result__section">
+      <div className="result__list">
+        {resultsList}
+      </div>
+    </section>
   );
 };
 
