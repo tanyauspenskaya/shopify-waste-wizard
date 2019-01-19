@@ -16,7 +16,12 @@ class App extends Component {
   componentDidMount = () => {
     wasteData()
     .then(res => {
-      this.setState({ data: res.data });
+      const newRes = res.data.map((item, index) => {
+        item.index = index;
+        item.favourite = false;
+        return item;
+      });
+      this.setState({ data: newRes });
     })
     .catch(err => {
       console.log(err);
@@ -24,7 +29,7 @@ class App extends Component {
   }
 
   componentDidUpdate = () => {
-    console.log(this.state);
+    //console.log(this.state);
   }
 
   onSearchSubmit = (term) => {
@@ -35,8 +40,10 @@ class App extends Component {
     })
     .map(item => {
       return {
+        id: item.index,
         title: item.title,
-        description: item.body
+        description: item.body,
+        favourite: item.favourite
       }
     });
     this.setState({ results: searchResults });
@@ -44,6 +51,25 @@ class App extends Component {
 
   onSearchClear = () => {
     this.setState({ results: [] });
+  }
+
+  handleFavourites = (item) => {
+    item.favourite = !item.favourite;
+
+    if (item.favourite) {
+      // add to favourites
+      const favsUpdated = [...this.state.favourites, item];
+      this.setState({ favourites: favsUpdated });
+    } else {
+      // remove from favourites
+      const favsUpdated = this.state.favourites.filter(fav => fav.id !== item.id);
+      this.setState({ favourites: favsUpdated });
+    }
+    // update results
+    const index = this.state.results.findIndex(el => el.id === item.id);
+    const newResults = this.state.results;
+    newResults[index] = item;
+    this.setState({ results: newResults });
   }
 
   render(){
@@ -56,9 +82,11 @@ class App extends Component {
         />
         <Results 
           results={this.state.results} 
+          handleFavourites={this.handleFavourites}
         />
         <Favourites
           favourites={this.state.favourites}
+          handleFavourites={this.handleFavourites}
         />
       </div>
     );

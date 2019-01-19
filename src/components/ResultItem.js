@@ -1,7 +1,10 @@
 import icon from '../assets/icons.svg';
 import React from 'react';
 
-const ResultItem = ({ result }) => {
+const ResultItem = ({ result, handleFavourites }) => {
+
+  console.log(result.favourite);
+  
   
   const parseHTML = htmlContent => {
     let parser = new DOMParser();
@@ -9,10 +12,17 @@ const ResultItem = ({ result }) => {
     return { __html: parsedHtml };
   }
 
+  const handleClick = () => {
+    handleFavourites(result);
+  }
+
   return(
     <div className="result__item">
       <div className="result__title">
-        <button className="result__btn">
+        <button 
+          className={"result__btn " + (result.favourite ? 'result__btn--green' : 'result__btn--grey')}
+          onClick={handleClick}
+        >
           <svg 
             className="result__star" 
             xmlns="http://www.w3.org/2000/svg" 

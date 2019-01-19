@@ -33,12 +33,20 @@
     height: $star-dimensions * 1.6;
     display: flex;
     align-items: center;
+
+    &--grey {
+      color: $color-grey;
+    }
+
+    &--green {
+      color: $color-green;
+    }
   }
 
   &__star {
     display: block;
     width: $star-dimensions;
     height: $star-dimensions;
-    fill: $color-grey;
+    fill: currentColor;
   }
 }

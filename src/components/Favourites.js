@@ -1,12 +1,13 @@
 import React from 'react';
 import ResultItem from './ResultItem';
 
-const Favourites = ({ favourites }) => {
+const Favourites = ({ favourites, handleFavourites }) => {
   const favouritesList = favourites.map(result => {
     return(
       <ResultItem 
-        key={result.title}
+        key={result.id}
         result={result}
+        handleFavourites={handleFavourites}
       />
     );
   });
