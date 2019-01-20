@@ -10,13 +10,13 @@ Build a web app to search for waste items using the Toronto Waste Wizard databas
 + When the search input field is cleared, the list of results should also be cleared. 
 + Performing a search should render a list of potential matching items based on keywords. Each item should:
    + Render the title and description of the item.
-   - Render a grey star button *if the item is not already favourited*.
-   - Render a green star icon *if the item is already favourited*.
-   - Clicking the star button should add the item to the favourites list.
+   + Render a grey star button *if the item is not already favourited*.
+   + Render a green star icon *if the item is already favourited*.
+   + Clicking the star button should add the item to the favourites list.
 - When the number of favourites is more than one, the app should render a list of items. Each saved item should:
-   - Render the title and description of the item.
-   - Render a green star button *if the item has been favourited*.
-   - Clicking the green star button should remove the item from the saved list.
+   + Render the title and description of the item.
+   + Render a green star button *if the item has been favourited*.
+   + Clicking the green star button should remove the item from the saved list.
 
 ## Design
 

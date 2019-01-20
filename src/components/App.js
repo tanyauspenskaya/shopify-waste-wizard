@@ -61,12 +61,12 @@ class App extends Component {
       const favsUpdated = this.state.favourites.filter(fav => fav.id !== item.id);
       this.setState({ favourites: favsUpdated });
     }
-    // update results
+    // update results state
     const index = this.state.results.findIndex(el => el.id === item.id);
     const newResults = this.state.results;
     newResults[index] = item;
     this.setState({ results: newResults });
-    // update data
+    // update data state
     const indexData = this.state.data.findIndex(el => el.index === item.id);
     const newData = this.state.data;
     newData[indexData].favourite = item.favourite;

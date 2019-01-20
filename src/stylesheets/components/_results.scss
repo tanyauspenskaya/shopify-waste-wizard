@@ -1,38 +1,69 @@
 .result {
   &__section {
-    padding: 1.5em;
+    padding: 2.5rem;
 
     &--favourite {
       background: $color-green-light;
       margin: auto 0 0 0;
     }
+
+    @include phone-port-sm {
+      padding: 2rem 2rem 0;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 122rem;
+    margin: 0 auto;
   }
 
   &__header {
-    font-size: 2em;
     color: $color-green;
+    margin: 0 auto 1.5rem;
   }
 
   &__item {
     display: flex;
+    align-items: baseline;
+
+    &:not(last-of-type) {
+      margin: 0 auto 3.5rem auto;
+    }
+
+    @include phone-port {
+      flex-flow: column wrap;
+    }
   }
 
   &__title {
     flex: 1;
     display: flex;
     align-items: flex-start;
+    padding: 0 2rem 0 0;
+
+    @include phone-port {
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
   }
 
   &__description {
-    width: 55%;
+    width: 56%;
+
+    @include phone-port {
+      width: 100%;
+    }
   }
 
   &__btn {
-    cursor: pointer;
-    margin: 0 1em 0 0;
-    height: $star-dimensions * 1.6;
+    @include button-reset;
+    margin: 0 1.6rem 0 0;
+    width: $star-dimensions;
+    height: 2.3rem * 1.6;
     display: flex;
     align-items: center;
+    outline: none;
 
     &--grey {
       color: $color-grey;

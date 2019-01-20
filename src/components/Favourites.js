@@ -14,8 +14,8 @@ const Favourites = ({ favourites, handleFavourites }) => {
 
   return(
     <section className="result__section result__section--favourite">
-      <h2 className="result__header">Favourites</h2>
       <div className="result__list">
+        <h2 className="result__header">Favourites</h2>
         {favouritesList}
       </div>
     </section>

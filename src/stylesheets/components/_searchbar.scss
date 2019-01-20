@@ -1,30 +1,50 @@
 .search {
   &__section {
-    padding: 1.5em;
+    padding: 2.5rem 2.5rem 0;
+
+    @include phone-port-sm {
+      padding: 2rem 2rem 0;
+    }
   }
 
   &__form {
     display: flex;
+    width: 100%;
+    max-width: 122rem;
+    margin: 0 auto;
   }
 
   &__input {
     flex: 1;
-    height: 4.5em;
-    border-radius: .2em;
+    height: 6rem;
+    border-radius: .3rem;
     border: 1px solid $color-grey;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 1rem;
+    color: inherit;
+
+    &:focus {
+      box-shadow: 0 0 5px rgba($color-green, 1);
+    }
   }
 
   &__submit {
-    width: 4.5em;
-    margin: 0 0 0 1.5em;
+    @include button-reset;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 0 0 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: $color-green;
-    border: 0;
-    border-radius: .2em;
-    cursor: pointer;
+    border-radius: .3rem;
     transition: .3s background-color ease;
+    outline: none;
+
+    &:active {
+      filter: saturate(150%);
+    }
 
     &:hover {
       background-color: $color-blue;
@@ -34,7 +54,7 @@
   &__magnifier {
     display: block;
     fill: $color-white;
-    width: 2.8em;
-    height: 2.8em;
+    width: 3.6rem;
+    height: 3.6rem;
   }
 }

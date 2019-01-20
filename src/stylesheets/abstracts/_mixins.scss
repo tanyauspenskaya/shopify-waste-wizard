@@ -1,0 +1,24 @@
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+$tab-port: 992px;
+$phone-port: 600px;
+$phone-port-sm: 480px;
+
+@mixin tab-port {
+  @media (max-width: #{$tab-port}) { @content };
+}
+
+@mixin phone-port {
+  @media (max-width: #{$phone-port}) { @content };
+}
+
+@mixin phone-port-sm {
+  @media (max-width: #{$phone-port-sm}) { @content };
+}
