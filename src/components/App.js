@@ -28,10 +28,6 @@ class App extends Component {
     });
   }
 
-  componentDidUpdate = () => {
-    //console.log(this.state);
-  }
-
   onSearchSubmit = (term) => {
     const searchTerm = term.toLowerCase();
     const data = this.state.data;
@@ -70,6 +66,11 @@ class App extends Component {
     const newResults = this.state.results;
     newResults[index] = item;
     this.setState({ results: newResults });
+    // update data
+    const indexData = this.state.data.findIndex(el => el.index === item.id);
+    const newData = this.state.data;
+    newData[indexData].favourite = item.favourite;
+    this.setState({ data: newData });
   }
 
   render(){
