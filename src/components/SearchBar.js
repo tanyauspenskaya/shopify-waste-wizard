@@ -4,16 +4,18 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   state = { term: '' };
 
-  onInputChange = (e) => {
+  onInputChange = e => {
     this.setState({ term: e.target.value });
     if (!e.target.value.length) {
       this.props.onSearchClear();
     }
   }
 
-  onFormSubmit = (e) => {
+  onFormSubmit = e => {
     e.preventDefault();
-    this.props.onFormSubmit(this.state.term);
+    if (this.state.term.trim().length) {
+      this.props.onFormSubmit(this.state.term);
+    }
   }
 
   render() {
