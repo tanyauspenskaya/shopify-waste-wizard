@@ -1,10 +1,7 @@
 import icon from '../assets/icons.svg';
 import React from 'react';
 
-const ResultItem = ({ result, handleFavourites }) => {
-
-  console.log(result.favourite);
-  
+const ResultItem = ({ result, handleFavourites }) => { 
   
   const parseHTML = htmlContent => {
     let parser = new DOMParser();

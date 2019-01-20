@@ -10,7 +10,8 @@ class App extends Component {
   state = {
     data: [],
     results: [],
-    favourites: []
+    favourites: [],
+    message: ''
   };
 
   componentDidMount = () => {
@@ -24,7 +25,7 @@ class App extends Component {
       this.setState({ data: newRes });
     })
     .catch(err => {
-      console.log(err);
+      this.setState({ message: `Something went wrong. ${err}. Please try again.` });
     });
   }
 
@@ -43,10 +44,13 @@ class App extends Component {
       }
     });
     this.setState({ results: searchResults });
+    if (!searchResults.length) {
+      this.setState({ message: 'No results found. Please try again.' });
+    }
   }
 
   onSearchClear = () => {
-    this.setState({ results: [] });
+    this.setState({ results: [], message: '' });
   }
 
   handleFavourites = (item) => {
@@ -84,6 +88,7 @@ class App extends Component {
         <Results 
           results={this.state.results} 
           handleFavourites={this.handleFavourites}
+          errMsg={this.state.message}
         />
         <Favourites
           favourites={this.state.favourites}

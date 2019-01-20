@@ -80,4 +80,17 @@
     height: $star-dimensions;
     fill: currentColor;
   }
+
+  &__error {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__walle {
+    display: block;
+    width: 12rem;
+    margin: 0 auto 2rem;
+  }
 }
