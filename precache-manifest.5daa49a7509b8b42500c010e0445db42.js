@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/shopify-waste-wizard/static/css/main.bd46a756.chunk.css"
   },
   {
-    "revision": "7d827a52dfafe4fdd4387db033685ab0",
+    "revision": "e2286dc6d7d824cc5b8ab044e51cef1d",
     "url": "/shopify-waste-wizard/index.html"
   }
 ];
