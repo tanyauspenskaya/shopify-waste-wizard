@@ -1,7 +1,7 @@
 {
   "main.css": "/shopify-waste-wizard/static/css/main.bd46a756.chunk.css",
-  "main.js": "/shopify-waste-wizard/static/js/main.e7dd8251.chunk.js",
-  "main.js.map": "/shopify-waste-wizard/static/js/main.e7dd8251.chunk.js.map",
+  "main.js": "/shopify-waste-wizard/static/js/main.f8bf0c54.chunk.js",
+  "main.js.map": "/shopify-waste-wizard/static/js/main.f8bf0c54.chunk.js.map",
   "static/js/1.e354f00d.chunk.js": "/shopify-waste-wizard/static/js/1.e354f00d.chunk.js",
   "static/js/1.e354f00d.chunk.js.map": "/shopify-waste-wizard/static/js/1.e354f00d.chunk.js.map",
   "runtime~main.js": "/shopify-waste-wizard/static/js/runtime~main.c7e3df94.js",
@@ -9,6 +9,6 @@
   "static/media/icons.svg": "/shopify-waste-wizard/static/media/icons.0415de8e.svg",
   "static/css/main.bd46a756.chunk.css.map": "/shopify-waste-wizard/static/css/main.bd46a756.chunk.css.map",
   "index.html": "/shopify-waste-wizard/index.html",
-  "precache-manifest.5daa49a7509b8b42500c010e0445db42.js": "/shopify-waste-wizard/precache-manifest.5daa49a7509b8b42500c010e0445db42.js",
+  "precache-manifest.c29f1556db66915cf32a0e38fb55f9a2.js": "/shopify-waste-wizard/precache-manifest.c29f1556db66915cf32a0e38fb55f9a2.js",
   "service-worker.js": "/shopify-waste-wizard/service-worker.js"
 }
