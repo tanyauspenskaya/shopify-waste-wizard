@@ -1,6 +1,6 @@
 # Shopify Web Engineer Challenge
 
-(live version)[https://tanyauspenskaya.github.io/shopify-waste-wizard/]
+[live version](https://tanyauspenskaya.github.io/shopify-waste-wizard/)
 
 ---
 
